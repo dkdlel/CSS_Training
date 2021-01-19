@@ -1,0 +1,20 @@
+.area{
+	width: 800px;
+	border: 3px;
+	border-style: dashed;
+	border-color: red;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.area .thumb{
+	float: left;
+}
+.text{
+	clear: both;
+}
+img{
+	vertical-align: top;
+	border : 3px;
+	border-style: solid;
+	margin: 0 0;
+}

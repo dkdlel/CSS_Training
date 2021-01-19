@@ -1,0 +1,42 @@
+/* *{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+.content{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 800px;
+    height: 400px;
+    margin: -200px 0 0 -400px;
+    background-color: lime; /*  여기서 패딩을 지정하면 이 배경색의 영역은 800 + 20 + 20 px*/
+/*}
+
+.inn{
+    padding: 20px;  /* 따로 영역을 하나 둬서 패딩을 주면 영역은 800px */
+/*}
+
+/*--------------------------------------------------------------------------------------*/
+
+
+/*  이 방법은 크기가 줄면 컨텐트 부분으 배경을 넘을 수 있다 
+    바깥쪽으로부터 거리를 뒤서 가운데에 맞추는 방식 */
+
+.content{
+    position: absolute;
+    left: 100px;
+    right: 100px;
+    top: 100px;
+    bottom: 100px;
+    background-color: lime;
+}
+
+.inn{
+    padding: 20px;
+}

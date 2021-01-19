@@ -1,0 +1,50 @@
+.box{
+    width: 400px;
+    padding: 20px;
+    border: 5px solid black;
+    font: 12px verdana, sans-serif;
+    font-weight: bold;
+}
+
+.area{
+    position: relative;
+    width: 800px;
+    margin: 0 auto;
+    border: 5px dashed red;
+}
+
+.A{
+    position: relative;
+    left: 0;
+    margin: 100px 0;
+    background-color: rgba(255, 0, 0, 0.8);
+}
+
+.B{
+    position: relative;
+    left: 50px;
+    background-color: rgba(0, 255, 0, 0.8);
+}
+
+.C{
+    position: relative;
+    left: 100px;
+    background-color: rgba(0, 0, 255, 0.8);
+}
+
+    /* 
+    absolute
+        위로(z) 띄우는 느낌 (절대적 위치)
+        부모를 기준으로 위치 지정(top, bottom, left, right)
+        그 외 기준은 무시하는 느낌
+        다른 요소들은 이 속성이 지정된 태그들을 무시하고 위치를 잡는다 (밑으로 겹쳐지게)
+
+    relative
+        주변 요소들의 위치 지정 후 그 때의 내 자리를 기준으로 이동 (상대적 위치)
+        위치 지정을 하지 않으면 그대로
+
+    fixed
+        absolute하고 비슷한 특징
+        모든 위치 기준을 무시하고 가장 바깥의 왼쪽 위부터 위치 계산,
+        스크롤을 내려도 고정
+    */

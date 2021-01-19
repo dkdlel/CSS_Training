@@ -1,0 +1,14 @@
+*{margin: 0; padding: 0; font-family: sans-serif; font-size: 12px;}
+img{vertical-align: top;}
+.wrap{
+	width: 400px;
+	border: 3px red dashed;
+	border-radius: 5px;
+	display: inline-flex;
+	flex-wrap: wrap;
+}
+.thumb{
+	border: 2px black solid;
+	border-radius: 5px;
+	margin: 1px 0;
+}

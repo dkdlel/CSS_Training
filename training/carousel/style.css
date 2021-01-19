@@ -1,0 +1,38 @@
+*{margin: 0; padding: 0; font-family: sans-serif; font-size: 50px;}
+img, fieldset{border: 0;}
+img{vertical-align: top;}
+ul, ol{list-style: none;}
+em, address{font-style: normal;}
+a{text-decoration: none;}
+a:hover, a:active, a:focus{text-decoration: underline;}
+
+#container{
+    width: 800px;
+    margin: 0 auto;
+}
+
+#slider{
+    width: 100%;
+    position: relative; 
+}
+
+.slider_item{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: white;
+    top: 0;
+    z-index: 0;
+    opacity: 0;
+    transition: all .7s ease-in-out;
+    transform: sacle(.8);
+}
+
+.showing{
+    z-index: 1;
+    opacity: 1;
+    transform: none;
+}

@@ -1,0 +1,19 @@
+.wrap{
+	margin: 0 auto;
+	width: 800px;
+}
+h1{
+	padding: 15px 0;
+}
+.thumb{
+	margin: 15px;
+	float: left;
+}
+.text{
+	margin-left: 130px;
+}
+.thumb2{
+	float: right;
+	border: 2px;
+	border-style: solid;
+}

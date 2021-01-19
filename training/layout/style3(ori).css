@@ -1,0 +1,92 @@
+*{margin: 0; padding: 0; font-family: sans-serif;font-size: 12px;}
+img, fieldset{border: 0;}
+img{vertical-align: top;}
+ul, ol{list-style: none;}
+em, address{font-style: normal;}
+a{text-decoration: none;}
+a:hover, a:active, a:focus{text-decoration: underline;}
+
+/*
+    현재 위치에서 좌우로 배치 => float 
+    위치를 따로 지정을 하고 싶다 => position
+*/
+
+/*  
+    화면이 줄어 드는 비율에 맞춰서 화면 구성할 땐 %사용
+    600px이 원래 크기 였다면 전체 크기 970px를 나누면 비율이 나온다 (600 / 970 = 61.85....) 
+*/
+
+#wrap{
+    width: 970px;
+    margin: 0 auto;
+    background-color: gray;
+}
+
+#header{
+    padding: 20px;
+    background-color: red;
+}
+
+#header .header-area{
+    margin: 0 auto;
+}
+
+#container{
+    margin: 0 auto;
+    padding-bottom: 20px;
+    *zoom: 1;
+    background-color: lime;
+}
+
+#container:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#container #content{
+    width: 62%;
+    float: right;
+    background-color: blue;
+}
+
+#container #content .inn{
+    padding: 20px;
+}
+
+#container .aside{
+    width: 38%;
+    float: left;
+    background-color: green;
+}
+
+#container .aside .inn{
+    padding: 20px;
+}
+
+#footer{
+    padding: 20px;
+    background-color: silver;
+}
+
+#footer .footer-area{
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 970px) {
+    #wrap{
+        width: auto;    /* 970보다 작을 때 wrap은 block요소이기 때문에 가득 채워짐 */
+    }
+}
+
+@media screen and (max-width: 670px) {
+    #container #content{
+        float: none;
+        width: auto;
+    }
+
+    #container .aside{
+        float: none;
+        width: auto;
+    }
+}

@@ -1,0 +1,37 @@
+.area{
+    position: relative;
+    width: 800px;
+    margin: 0 auto;
+    border: 5px dashed red;
+}
+.box{
+    width: 400px;
+    padding: 20px;
+    border: 5px solid black;
+    font: 12px verdana, sans-serif;
+    font-weight: bold;
+}
+.A{
+    position: relative;
+    left: 0;
+    margin: 100px 0;
+    background-color: rgba(255,0,0,0.8);
+}
+.B{
+    position: relative;
+    left:50px;
+    background-color: rgba(0,255,0,0.8);
+}
+.C{
+    position: relative;
+    left:100px;
+    background-color: rgba(0,0,255,0.8);
+}
+hr{
+    position: relative;
+    margin: 50px 0;
+}
+#first{
+    width: 1000px;
+    margin: 0 auto;
+}

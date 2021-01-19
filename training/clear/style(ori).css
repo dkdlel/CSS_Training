@@ -1,0 +1,29 @@
+img{
+    vertical-align: top;
+}
+
+.area{
+    width: 800px;
+    overflow: hidden;  /* 내가 지정한 영역을 넘치는 부분을 지움(hidden) */
+    margin: 0 auto;
+    border: 3px dashed red;
+    *zoom: 1; /* IE6, IE7 Hack (좋은 방법은 아님) */
+}
+
+
+/*----------------------------------------
+.area:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+-------float 해지 공식 (많이 씀)--------------------*/
+
+.area .thumb{
+    float: left;
+    border: 3px solid;
+}
+
+.cls{
+    clear: both;
+}

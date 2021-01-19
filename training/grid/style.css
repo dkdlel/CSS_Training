@@ -1,0 +1,14 @@
+*{margin: 0; padding: 0; font-family: sans-serif; font-size: 20px;}
+.container{
+	border: 5px red dashed;
+	border-radius: 5px;
+	padding: 5px;
+	display: grid;
+	/*grid-template-columns: 1fr 1fr 1fr;*/
+	grid-template-columns: repeat(auto-fit,minmax(20%, auto));
+	grid-template-rows: repeat(auto-fit,minmax(100px,auto));
+}
+.item{
+	border: 3px black solid;
+	border-radius: 5px;
+}
