@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Route, Switch, useHistory } from 'react-router-dom';
 
-function App() {
+import Flex from './Components/Flex/Flex';
+import Float from './Components/Float/Float';
+import Main from './Components/Main/Main';
+
+import { Paths } from './Paths';
+
+import './App.scss';
+
+const App = () => {
+  const history = useHistory();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Switch>
+      <Route exact path={Paths.index} component={Main} />
+      <Route path={Paths.flex} component={Flex} />
+      <Route path={Paths.float} component={Float} />
+      <Route render={() => history.push(Paths.index)} />
+    </Switch>
   );
-}
+};
 
 export default App;
