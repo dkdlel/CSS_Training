@@ -5,7 +5,7 @@ const Float = () => {
 
     return (
         <>
-            <Header title="Float" />
+            <Header title={"Float"} />
         </>
     );
 };
