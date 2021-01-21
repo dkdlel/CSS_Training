@@ -10,7 +10,7 @@ const Flex = () => {
             <Header title={"Flex"} />
             <main>
                 <article>
-                    <div className={styles['title']}>traning 따라해보기</div>
+                    <h1 className={styles['title']}>traning 따라해보기</h1>
                     <div className={styles['wrap']}>
                         <div className={styles['thumb']}><img src="http://placehold.it/100x120?text=1" alt="" /></div>
                         <div className={styles['thumb']}><img src="http://placehold.it/100x120?text=2" alt="" /></div>

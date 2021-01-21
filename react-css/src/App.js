@@ -1,11 +1,13 @@
 import React from 'react';
 import { Route, Switch, useHistory } from 'react-router-dom';
 
-import Flex from './Components/Flex/Flex';
-import Float from './Components/Float/Float';
-import Main from './Components/Main/Main';
+import Flex from './components/Flex/Flex';
+import Float from './components/Float/Float';
+import Main from './components/Main/Main';
+import Layout from './components/Layout/Layout';
+import Position from './components/Position/Position';
 
-import { Paths } from './Paths';
+import { Paths } from './paths';
 
 import './App.scss';
 
@@ -16,6 +18,8 @@ const App = () => {
       <Route exact path={Paths.index} component={Main} />
       <Route path={Paths.flex} component={Flex} />
       <Route path={Paths.float} component={Float} />
+      <Route path={Paths.position} component={Position} />
+      <Route path={Paths.layout} component={Layout} />
       <Route render={() => history.push(Paths.index)} />
     </Switch>
   );

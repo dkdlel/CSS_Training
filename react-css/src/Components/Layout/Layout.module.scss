@@ -1,0 +1,91 @@
+@import '../../static/stylesheets/mixin';
+
+article{padding: 24px;}
+.title{
+    margin-bottom: 5px;
+}
+
+img, fieldset{border: 0;}
+img{vertical-align: top;}
+ul,ol{list-style: none;}
+em,address{font-style: normal;}
+a{text-decoration: none;}
+a:hover, a:active, a:focus{text-decoration: underline;}
+
+.wrap{
+    width: 100%;
+	margin: 0 auto;
+    background-color: gray;
+    .header{
+        background-color: red;
+        padding: 20px;
+    }
+    .container{
+        background-color: lime;
+        padding-bottom: 20px;
+        // position: relative;
+        display: flex;
+        // .inn{
+        //     padding: 20px;
+        // }
+        .content{
+            .inn{
+                padding: 20px;
+                background-color: blue;
+            }
+            @include mobile{
+                width: 100%;
+            }
+        //     position: relative;
+        //     float:left;
+        //     width: 56%;
+        //     @include mobile{
+        //         position: static;
+        //         float: none;
+        //         width: 100%;
+        //     }
+        }
+        .nav{
+            .inn{
+                padding: 20px;
+                background-color: purple;
+            }
+            @include mobile{
+                width: 100%;
+            }
+        //     position: relative;
+        //     float:left;
+        //     width: 22%;
+        //     @include mobile{
+        //         position: static;
+        //         float: none;
+        //         width: 100%;
+        //     }
+        }
+        .aside{
+            .inn{
+                padding: 20px;
+                background-color: green;
+            }
+            @include mobile{
+                width: 100%;
+            }
+        //     position: relative;
+        //     float: left;
+        //     width: 22%;
+        //     @include mobile{
+        //         position: static;
+        //         float: none;
+        //         width: 100%;
+        //     }
+        }
+        // &:after{
+        //     content: "";
+        //     display: block;
+        //     clear: both;
+        // }
+    }
+    .footer{
+        padding: 20px;
+    }
+}

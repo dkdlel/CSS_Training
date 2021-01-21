@@ -1,0 +1,61 @@
+article{padding: 24px;}
+
+.title{
+    margin-bottom: 5px;
+}
+
+.area{
+    .wrap{
+        width: 100%;
+        margin: 0 auto;
+        .profile{
+            height: 150px;
+            position: relative;
+            .thumb{
+                margin: 15px;
+                float: left;
+                & > img{
+                    vertical-align: top;
+                }
+            }
+            .text{
+                margin-left: 130px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        .right{
+            float: right;
+            .thumb2{
+                border: 2px solid black;
+                float:right;
+                &>img{
+                    vertical-align: top;
+                }
+            }
+        }
+        &:after{
+            display: block;
+            content: "";
+            clear: both;
+        }
+    }
+    .reverse-right{
+        margin-top: 5px;
+        padding-bottom: 24px;
+        float: right;
+        .thumb3{
+            border: 2px solid black;
+            float: left;
+            &>img{
+                vertical-align: top;
+            }
+        }
+    }
+    &:after{
+        display: block;
+        content: "";
+        clear: both;
+    }
+}
