@@ -25,6 +25,9 @@ a:hover, a:active, a:focus{text-decoration: underline;}
         padding-bottom: 20px;
         // position: relative;
         display: flex;
+        @include mobile{
+            display: block;
+        }
         // .inn{
         //     padding: 20px;
         // }
@@ -32,9 +35,6 @@ a:hover, a:active, a:focus{text-decoration: underline;}
             .inn{
                 padding: 20px;
                 background-color: blue;
-            }
-            @include mobile{
-                width: 100%;
             }
         //     position: relative;
         //     float:left;
@@ -50,9 +50,6 @@ a:hover, a:active, a:focus{text-decoration: underline;}
                 padding: 20px;
                 background-color: purple;
             }
-            @include mobile{
-                width: 100%;
-            }
         //     position: relative;
         //     float:left;
         //     width: 22%;
@@ -66,9 +63,6 @@ a:hover, a:active, a:focus{text-decoration: underline;}
             .inn{
                 padding: 20px;
                 background-color: green;
-            }
-            @include mobile{
-                width: 100%;
             }
         //     position: relative;
         //     float: left;
