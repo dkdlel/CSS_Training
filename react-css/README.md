@@ -1,2 +1,2 @@
 # 페이지 구조 작업
-<img src="/웹사이트 화면구조.png" width="800px" height="400px">
+<img src="웹사이트 화면구조.png" width="800px" height="400px" alt="웹사이트 화면 구조">
