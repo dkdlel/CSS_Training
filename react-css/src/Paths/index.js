@@ -4,4 +4,5 @@ export const Paths = {
     float: '/float',
     position: '/position',
     layout: '/layout',
+    flexBox: '/flexBox',
 };

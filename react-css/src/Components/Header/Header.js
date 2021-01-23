@@ -30,6 +30,11 @@ const navTitles = [
         path: '/layout',
         title: 'Layout',
     },
+    {
+        index: 5,
+        path: '/flexBox',
+        title: 'FlexBox',
+    },
 ]
 const Header = ({ title }) => {
 

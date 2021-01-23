@@ -6,6 +6,7 @@ import Float from './components/Float/Float';
 import Main from './components/Main/Main';
 import Layout from './components/Layout/Layout';
 import Position from './components/Position/Position';
+import FlexBox from './components/FlexBox/FlexBox';
 
 import { Paths } from './paths';
 
@@ -20,6 +21,7 @@ const App = () => {
       <Route path={Paths.float} component={Float} />
       <Route path={Paths.position} component={Position} />
       <Route path={Paths.layout} component={Layout} />
+      <Route path={Paths.flexBox} component={FlexBox} />
       <Route render={() => history.push(Paths.index)} />
     </Switch>
   );

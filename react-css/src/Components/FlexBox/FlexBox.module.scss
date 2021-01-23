@@ -1,0 +1,221 @@
+@import "../../static/stylesheets/mixin";
+
+$header: #ff6b57;
+$slider: #3c90be;
+$gallery: #f8de73;
+$rankup: #00d2a5;
+$latest: #9cabe4;
+$popular: #d76817;
+$box1: #0175bb;
+$box2: #1261c9;
+$social: #fe6eda;
+$footer: #474747;
+
+.text{
+    height: 100%;
+    font-size : 1.6rem;
+    color: #FFF;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 24px;
+    .header{
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: flex-end; // 뒤부터 정렬하여 90% 유지
+        order: 1;
+        @include tablet{
+            width: 100%;
+            order: 1;
+        }
+        @include mobile{
+            width: 100%;
+            order: 1;
+        }
+        &>div{
+            position: absolute;
+            top: 0; left: 0;
+            width: 12.5%;
+            min-width: 80px;
+            min-height: 80px;
+            background-color: $header;
+            &:after{ // 비율에 따른 사각형 유지
+                content: "";
+                display: block;
+                padding-bottom: 100%;
+            }
+            .logo-text{
+                font-size: 1.6rem;
+                color: #FFF;
+                font-weight: bold;
+                position: absolute;
+                top: 50%; left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        &>nav{
+            width: 87.5%;
+            min-height: 80px;
+            background-color: $header;
+        }
+    }
+    .slider_section{
+        width: 50%;
+        height: 350px;
+        background-color: $slider;
+        order: 2;
+        @include tablet{
+            width: 60%;
+            order: 2;
+        }
+        @include mobile{
+            width: 100%;
+            order: 2;
+        }
+    }
+    .gallery_section{
+        width: 27%;
+        height: 350px;
+        background-color: $gallery;
+        order: 3;
+        @include tablet{
+            width: 70%;
+            order: 7;
+        }
+        @include mobile{
+            width: 100%;
+            order: 5;
+        }
+    }
+    .rankup_section{
+        width: 23%;
+        height: 350px;
+        background-color: $rankup;
+        order: 4;
+        @include tablet{
+            width: 40%;
+            order: 3;
+        }
+        @include mobile{
+            width: 100%;
+            order: 6;
+        }
+    }
+    .latest_post_section{
+        width: 30%;
+        height: 200px;
+        order: 5;
+        background-color: $latest;
+        @include tablet{
+            width: 40%;
+            order: 4;
+        }
+        @include mobile{
+            width: 100%;
+            order: 3;
+        }
+    }
+    .popular_post_section{
+        width :30%;
+        height: 200px;
+        order: 6;
+        background-color: $popular;
+        @include tablet{
+            width: 40%;
+            order: 5;
+        }
+        @include mobile{
+            width: 100%;
+            order: 4;
+        }
+    }
+    .banner_section{
+        width: 23%;
+        height: 200px;
+        order: 7;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        flex-grow: 1; // 여백이 있을때 아이템의 크기를 늘림
+        flex-shrink: 1; // 아이템 크기가 넘친경우 크기를 줄일 수 있음
+        flex-basis: 0; // 기본 크기를 설정
+        position: relative;
+        @include tablet{
+            width: 30%;
+            height: auto;
+            order: 8;
+        }
+        @include mobile{
+            width: 100%;
+            display: flex;
+            flex-basis: auto;
+            order: 7;
+        }
+        .banner-text{
+            font-size : 1.6rem;
+            color: #FFF;
+            font-weight: bold;
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .banner_box1{
+            height: 100%;
+            background-color: $box1;
+            @include tablet{
+                width: 100%;
+            }
+            @include mobile{
+                width: 100%;
+            }
+        }
+        .banner_box2{
+            height: 100%;
+            background-color: $box2;
+            @include tablet{
+                width: 100%;
+            }
+            @include mobile{
+                width: 100%;
+            }
+        }
+    }
+    .social_section{
+        width: 17%;
+        height: 200px;
+        order: 8;
+        background-color: $social;
+        @include tablet{
+            width: 20%;
+            order: 6;
+        }
+        @include mobile{
+            width: 100%;
+            order: 8;
+        }
+    }
+    .footer{
+        order: 9;
+        width: 100%;
+        height: 80px;
+        background-color: $footer;
+        @include tablet{
+            width: 100%;
+            order: 9;
+        }
+        @include mobile{
+            width: 100%;
+            order: 9;
+        }
+    }
+}
