@@ -50,7 +50,7 @@
         - 웹사이트의 저작권 정보등이 들어 있는 영역
 
 > ## 메인페이지 구조 예시
-<img src="WebPage.png" width="800px" height="400px" alt="웹사이트 화면 구조" ></img>
+<img src="src/static/img/WebPage.png" width="800px" height="400px" alt="웹사이트 화면 구조" ></img>
 
 > ## 서브페이지
     * 소개 페이지
@@ -63,7 +63,7 @@
         - 웹사이트를 사용하는 사용자가 문의사항이 있을 때 글을 작성하기 위한 페이지    
 
 > ## 서브페이지 구조 예시
-<img src="SubPage.png" width="800px" height="400px" alt="서브페이지 화면 구조" ></img>
+<img src="src/static/img/SubPage.png" width="800px" height="400px" alt="서브페이지 화면 구조" ></img>
 
 > ## 폴백(fallback) 기법
     * px 단위를 먼저 사용하고 바로 이어서 rem 단위를 사용
@@ -82,7 +82,7 @@
                 sizes="[너빗값],[미디어 쿼리]"
                 type="[파일 유형]"
             />
-            <img src="파일 위치">
+            <img src="파일 위치" alt="이미지"/>
         </picture>
 
     * img 태그 : 폴백 기법 사용

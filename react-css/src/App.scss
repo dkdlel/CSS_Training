@@ -35,6 +35,9 @@ input[type='number']::-webkit-inner-spin-button {
 a {
     text-decoration: none;
     color: inherit;
+    &:hover, &:active, &:focus{
+        text-decoration: none;
+    }
 }
 ul {
     list-style: none;
