@@ -11,7 +11,15 @@ const Main = () => {
         <>
             <Header title={"CSS Study"} />
             <main className={styles['wrap']}>
-                <section className={styles['training']}>트레이닝</section>
+                <section className={styles['training']}>
+                    <ul className={styles['text']}>
+                        <li>1. 리액트 라우팅 재정리</li>
+                        <li>2. html로 css 연습</li>
+                        <li>3. React SCSS 연습</li>
+                        <li>4. Doit! 반응형 웹 만들기</li>
+                        <li>5. 마크다운(Markdown)</li>
+                    </ul>
+                </section>
                 <section className={styles['book']}>
                     <figcaption>참고 서적</figcaption>
                     <figure className={styles['doit']}>
