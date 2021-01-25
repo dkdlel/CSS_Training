@@ -73,7 +73,7 @@
 >   > 태그 사양 확인 <br/>
 >   > * picture : https://goo.gl./Ho5gBr <br/>
 >   > * source : https://goo.gl/HA38av<br />
->   > srcset 속성
+>   > * srcset 속성
 >   > |파일 위치|픽셀 밀도|너빗값|
 >   > |:---:|:---:|:---:|
 >   > |생략 불가|생략 가능|생략 가능|
