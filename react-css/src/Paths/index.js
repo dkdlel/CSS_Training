@@ -5,4 +5,5 @@ export const Paths = {
     position: '/position',
     layout: '/layout',
     flexBox: '/flexBox',
+    display: '/display',
 };

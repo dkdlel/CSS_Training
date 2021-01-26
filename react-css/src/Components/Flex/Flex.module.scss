@@ -4,6 +4,24 @@ article{padding: 24px;}
     margin-bottom: 5px;
 }
 
+.flex-container{
+    .flex-area{
+        padding: 10px;
+        .container1{
+            display: block;
+            background-color: #ffe300;
+            border: 1px solid black;
+            border-radius: 5px;
+            .item{
+                margin: 3px;
+                padding: 2px;
+                background-color: #26ab1c;     
+                border: 1px solid black;
+                border-radius: 3px;
+            }
+        }
+    }
+}
 .wrap{
     width: 400px;
 	border: 3px red dashed;

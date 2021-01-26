@@ -14,7 +14,7 @@ const Main = () => {
                 <section className={styles['training']}>
                     <ul className={styles['text']}>
                         <li>1. 리액트 라우팅 재정리</li>
-                        <li>2. html로 css 연습</li>
+                        <li>2. 인프런 자료를 통한 css 연습</li>
                         <li>3. React SCSS 연습</li>
                         <li>4. Doit! 반응형 웹 만들기</li>
                         <li>5. 마크다운(Markdown)</li>

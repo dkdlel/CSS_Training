@@ -12,28 +12,33 @@ const navTitles = [
     },
     {
         index: 1,
+        path: '/display',
+        title: 'Display',
+    },
+    {
+        index: 2,
         path: '/flex',
         title: 'Flex',
     },
     {
-        index: 2,
+        index: 3,
+        path: '/flexBox',
+        title: 'FlexBox',
+    },
+    {
+        index: 4,
         path: '/float',
         title: 'Float',
     },
     {
-        index: 3,
+        index: 5,
         path: '/position',
         title: 'Position',
     },
     {
-        index: 4,
+        index: 6,
         path: '/layout',
         title: 'Layout',
-    },
-    {
-        index: 5,
-        path: '/flexBox',
-        title: 'FlexBox',
     },
 ]
 const Header = ({ title }) => {

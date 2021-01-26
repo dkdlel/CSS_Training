@@ -1,15 +1,34 @@
+@import '../../static/stylesheets/mixin';
+
 article{padding: 24px;}
 
 .title{
     margin-bottom: 5px;
 }
 
+.table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+    // min-width: 800px;
+    font-size: 1.167rem; // 14px
+    text-align: center;
+    .table-head{
+        font-size: 1.333rem; // 16px;
+        font-weight: bold;
+    }
+    tr, td{
+        padding: 5px;
+        border: 1px solid black;
+    }
+}
+
 .area{
-    width: 800px;
+    width: 83.5945663532vw;
     margin: 0 auto;
     border: 5px dashed red;
     .box{
-        width: 400px;
+        width: 41.7972831766vw;
         padding: 20px;
         border: 5px solid black;
         font-weight: bold;
