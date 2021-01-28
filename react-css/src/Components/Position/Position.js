@@ -47,9 +47,9 @@ const Position = () => {
             <main>
                 <article>
                     <h1 className={styles['title']}>position</h1>
-                    <table className={styles['table']}>
+                    <table>
                         <tbody>
-                            <tr className={styles['table-head']}>
+                            <tr style={{ fontSize: "1.333rem", fontWeight: "bold" }}>
                                 <td>값</td>
                                 <td>문서 흐름</td>
                                 <td>설명</td>

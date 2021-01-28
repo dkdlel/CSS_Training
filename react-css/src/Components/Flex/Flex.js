@@ -1,19 +1,21 @@
-import React, { useCallback, useState } from 'react';
+import React from 'react';
+import { FormControlLabel, Radio, RadioGroup } from '@material-ui/core';
 import classnames from 'classnames/bind';
+
 import Header from '../Header/Header';
 
 import styles from './Flex.module.scss';
-import { FormControlLabel, Radio, RadioGroup } from '@material-ui/core';
+import useInput from '../../hooks/useInput';
 
 const cn = classnames.bind(styles);
 
 const Flex = () => {
 
-    const [typeValue, setTypeValue] = useState();
-
-    const onChangeType = useCallback((e) => {
-        setTypeValue(e.target.value);
-    }, []);
+    const [displayValue, onChangeDisplay] = useInput('block');
+    const [dirValue, onChangeDir] = useInput('row');
+    const [wrapValue, onChangeWrap] = useInput('nowrap');
+    const [justifyValue, onChangeJustify] = useInput('flex-start');
+    const [alignValue, onChangeAlign] = useInput('stretch');
 
     return (
         <>
@@ -32,17 +34,87 @@ const Flex = () => {
                 <article>
                     <section className={styles['flex-container']}>
                         <h1>* 컨테이너에 적용하는 속성</h1>
-                        <div className={styles['flex-area']}>
+                        <div className={styles['flex-display']}>
                             - display : flex
-                            <div className={cn('container1')}>
-                                <div className={styles['item']}>AAA</div>
-                                <div className={styles['item']}>BBBBBBBBBB</div>
-                                <div className={styles['item']}>CCCCC</div>
+                            <div className={cn('container1', displayValue)}>
+                                <div className={cn('item')}>AAA</div>
+                                <div className={cn('item')}>BBBBBBBBBB</div>
+                                <div className={cn('item')}>CCCCC</div>
                             </div>
-                            <RadioGroup name="display-type" value={typeValue} onChange={onChangeType}>
-                                <FormControlLabel value="female" control={<Radio />} label="block" />
-                                <FormControlLabel value="male" control={<Radio />} label="flex" />
+                            <RadioGroup className={styles['radio']} name="display-type" value={displayValue} onChange={onChangeDisplay}>
+                                <FormControlLabel value="block" control={<Radio />} label="block" />
+                                <FormControlLabel value="flex" control={<Radio />} label="flex" />
                             </RadioGroup>
+                        </div>
+                        <div className={styles['flex-display']}>
+                            - flex-direction : 아이템들이 배치되는 축의 방향을 결정
+                            <div className={cn('container2', dirValue)}>
+                                <div className={cn('item')}>AAA</div>
+                                <div className={cn('item')}>BBBBBBBBBB</div>
+                                <div className={cn('item')}>CCCCC</div>
+                            </div>
+                            <RadioGroup className={styles['radio']} name="display-type" value={dirValue} onChange={onChangeDir}>
+                                <FormControlLabel value="row" control={<Radio />} label="row" />
+                                <FormControlLabel value="row-reverse" control={<Radio />} label="row-reverse" />
+                                <FormControlLabel value="column" control={<Radio />} label="column" />
+                                <FormControlLabel value="column-reverse" control={<Radio />} label="column-reverse" />
+                            </RadioGroup>
+                        </div>
+                        <div className={styles['flex-display']}>
+                            - flex-wrap : 컨테이너가 더 이상 아이템들을 한 줄에 담을 여유 공간이 없을 때 아이템 줄바꿈을 어떻게 할지 결정하는 속성
+                            <div className={cn('container3', wrapValue)}>
+                                <div className={cn('item')}>AAA</div>
+                                <div className={cn('item')}>BBBBBBBBBB</div>
+                                <div className={cn('item')}>CCCCC</div>
+                            </div>
+                            <RadioGroup className={styles['radio']} name="display-type" value={wrapValue} onChange={onChangeWrap}>
+                                <FormControlLabel value="nowrap" control={<Radio />} label="nowrap" />
+                                <FormControlLabel value="wrap" control={<Radio />} label="wrap" />
+                                <FormControlLabel value="wrap-reverse" control={<Radio />} label="wrap-reverse" />
+                            </RadioGroup>
+                            - flex-flow : flex-direction + flex-wrap
+                        </div>
+                        <h1 style={{ padding: "0 10px" }}>정렬</h1>
+                        <h1 style={{ padding: "10px" }}>justify : 메인축 방향 정렬 / align : 수직출 방향 정렬</h1>
+                        <div className={styles['flex-display']}>
+                            - justify-content : 메인축 방향으로 아이템을들 정렬하는 속성
+                            <div className={cn('container4', justifyValue)}>
+                                <div className={cn('item')}>AAA</div>
+                                <div className={cn('item')}>BBBBBBBBBB</div>
+                                <div className={cn('item')}>CCCCC</div>
+                            </div>
+                            <RadioGroup className={styles['radio']} name="display-type" value={justifyValue} onChange={onChangeJustify}>
+                                <FormControlLabel value="flex-start" control={<Radio />} label="flex-start" />
+                                <FormControlLabel value="flex-end" control={<Radio />} label="flex-end" />
+                                <FormControlLabel value="center" control={<Radio />} label="center" />
+                                <FormControlLabel value="space-between" control={<Radio />} label="space-between" />
+                                <FormControlLabel value="space-around" control={<Radio />} label="space-around" />
+                                <FormControlLabel value="space-evenly" control={<Radio />} label="space-evenly" />
+                            </RadioGroup>
+                            <table>
+                                <tbody>
+                                    <tr><th style={{ width: "100px" }}>value</th><th>description</th></tr>
+                                    <tr><td>space-between</td><td>아이템 사이 간격을 동일하게</td></tr>
+                                    <tr><td>space-around</td><td>아이템의 둘레 간격을 동일하게</td></tr>
+                                    <tr><td>sapce-evenly</td><td>아이템 사이와 양 끝에 간격을 동일하게(단, IE와 Edge 지원 안함)</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div className={styles['flex-display']}>
+                            - align-items : 수직축 방향으로 아이템을들 정렬하는 속성
+                            <div className={cn('container5', alignValue)}>
+                                <div className={cn('item', 'A')}>AAA</div>
+                                <div className={cn('item', 'B')}>BBBBBBBBBB</div>
+                                <div className={cn('item', 'C')}>CCCCC</div>
+                            </div>
+                            <RadioGroup className={styles['radio']} name="display-type" value={alignValue} onChange={onChangeAlign}>
+                                <FormControlLabel value="stretch" control={<Radio />} label="stretch" />
+                                <FormControlLabel value="flex-start" control={<Radio />} label="flex-start" />
+                                <FormControlLabel value="flex-end" control={<Radio />} label="flex-end" />
+                                <FormControlLabel value="center" control={<Radio />} label="center" />
+                                <FormControlLabel value="baseline" control={<Radio />} label="baseline" />
+                            </RadioGroup>
+                            baseline : 텍스트 베이스라인 기준으로 정렬
                         </div>
                     </section>
                     <section className={styles['flex-items']}>

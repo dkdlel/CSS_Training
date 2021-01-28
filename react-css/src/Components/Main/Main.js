@@ -18,6 +18,7 @@ const Main = () => {
                         <li>3. React SCSS 연습</li>
                         <li>4. Doit! 반응형 웹 만들기</li>
                         <li>5. 마크다운(Markdown)</li>
+                        <li>6. 커스텀 훅</li>
                     </ul>
                 </section>
                 <section className={styles['book']}>

@@ -4,18 +4,4 @@
 
 .wrap{
     padding: 24px;
-
-    .table{
-        width: 100%;
-        border: 1px solid black;
-        border-collapse: collapse;
-        text-align: center;
-        // min-width: 910px;
-        font-size: 1.167rem; // 14px
-        white-space: break-spaces;
-        th, tr, td{
-            padding: 5px;
-            border: 1px solid black;
-        }
-    }
 }
