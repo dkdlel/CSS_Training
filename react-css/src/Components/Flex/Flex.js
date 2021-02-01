@@ -16,6 +16,7 @@ const Flex = () => {
     const [wrapValue, onChangeWrap] = useInput('nowrap');
     const [justifyValue, onChangeJustify] = useInput('flex-start');
     const [alignValue, onChangeAlign] = useInput('stretch');
+    const [contentValue, onChangeContent] = useInput('stretch');
 
     return (
         <>
@@ -116,9 +117,37 @@ const Flex = () => {
                             </RadioGroup>
                             baseline : 텍스트 베이스라인 기준으로 정렬
                         </div>
+                        <div className={styles['flex-display']}>
+                            - align-content : 여러 행 정렬
+                            <div className={cn('container6', contentValue)}>
+                                <div className={cn('item')}>AAA</div>
+                                <div className={cn('item')}>BBBBBBBBBB</div>
+                                <div className={cn('item')}>CCCCC</div>
+                            </div>
+                            <RadioGroup className={styles['radio']} name="display-type" value={contentValue} onChange={onChangeContent}>
+                                <FormControlLabel value="stretch" control={<Radio />} label="stretch" />
+                                <FormControlLabel value="flex-start" control={<Radio />} label="flex-start" />
+                                <FormControlLabel value="flex-end" control={<Radio />} label="flex-end" />
+                                <FormControlLabel value="center" control={<Radio />} label="center" />
+                                <FormControlLabel value="space-between" control={<Radio />} label="space-between" />
+                                <FormControlLabel value="space-around" control={<Radio />} label="space-around" />
+                                <FormControlLabel value="space-evenly" control={<Radio />} label="space-evenly" />
+                            </RadioGroup>
+                        </div>
                     </section>
                     <section className={styles['flex-items']}>
                         <h1>* 아이템에 적용하는 속성</h1>
+                        <table>
+                            <tbody>
+                                <tr><th style={{ width: "100px" }}>key</th><th>description</th></tr>
+                                <tr><td>flex-basis</td><td>Flex 아이템의 기본 크기를 설정</td></tr>
+                                <tr><td>flex-grow</td><td>flex-basis를 제외한 여백 부분을 flex-grow에 지정된 숫자의 비율로 나누어 가짐</td></tr>
+                                <tr><td>flex-shrink</td><td>flex-basis의 값보다 작아질 수 있는지를 결정</td></tr>
+                                <tr><td>flex</td><td>flex-grow, flex-shrink, flex-basis (default : 1 1 0)</td></tr>
+                                <tr><td>align-self</td><td>해당 아이템의 수직축 방향 정렬</td></tr>
+                                <tr><td>order</td><td>각 아이템들의 시각적 나열 순서를 결정하는 속성</td></tr>
+                            </tbody>
+                        </table>
                     </section>
                 </article>
                 <hr />

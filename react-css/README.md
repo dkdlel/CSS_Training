@@ -91,4 +91,17 @@
 
     * img 태그 : 폴백 기법 사용
 
+# background(배경)
+    * background-color : 색
+
+    * background-image : 경로
+
+    * background-repeat : repeat, no-repeat, repeat-x, repeat-y
+
+    * background-attachment : scroll, fixed
+
+    * background-position : left top, x% y%, x y
+
+    * background-size : size, cover, contain
+<img src="src/static/img/cover-contain.jpg" width="800px" height="400px" alt="cover vs contain" ></img>
 
