@@ -105,3 +105,12 @@
     * background-size : size, cover, contain
 <img src="src/static/img/cover-contain.jpg" width="800px" height="400px" alt="cover vs contain" ></img>
 
+# transfrom
+<ul>
+    <li><a href="http://ianlunn.github.io/Hover/">Hover.css</a></li>
+    <li><a href="http://elrumordelaluz.github.io/csshake/#1">CSShake</a></li>
+    <li><a href="https://www.minimamente.com/project/magic/">MAGIC EFFECTS</a></li>
+</ul>
+
+# transition
+<a href="https://matthewlein.com/tools/ceaser">CSS EASING ANIMATION TOOL</a>
